@@ -1,0 +1,35 @@
+server:
+   servlet:
+      context-path: /tar-deployable
+spring:
+   application:
+      name: tar-deployable
+              
+---
+
+spring:
+   profiles:
+      active: dev
+server:
+   port: 50001
+                       
+---
+
+spring:
+   profiles: uat
+server:
+   port: 50002
+             
+---
+
+spring:
+   profiles: sit
+server:
+   port: 50003
+   
+---
+
+spring:
+   profiles: prod
+server:
+   port: 50004
